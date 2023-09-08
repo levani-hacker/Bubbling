@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Bubbling Example</title>
+</head>
+<body>
+    <div id="Garet" style="padding: 20px; background-color: lightblue;">
+        <p>Garet</p>
+        <div id="Shignit" style="padding: 20px; background-color: lightgreen;">
+            <p>Shignit</p>
+        </div>
+    </div>
+
+    <script>
+
+        const Garet = document.getElementById("Garet");
+        const Shignit = document.getElementById("Shignit");
+
+
+        Garet.addEventListener("click", function (event) {
+            console.log("შიდა ბუშტი გასკდა");
+        });
+
+
+        Shignit.addEventListener("click", function (event) {
+            console.log("შიდა ბუშტი გასკდა");
+        });
+    </script>
+</body>
+</html>
